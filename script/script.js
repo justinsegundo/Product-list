@@ -72,8 +72,83 @@ const productList = [
   },
   {
     productName: "biogesic",
-    price: 6.0,
+    price: 9.0,
     img: "images/biogesic.webp",
+  },
+  {
+    productName: "amoxicillin",
+    price: 6.0,
+    img: "images/amoxicillin.jpg",
+  },
+  {
+    productName: "bioflu",
+    price: 11.0,
+    img: "images/bioflu.webp",
+  },
+  {
+    productName: "neosep",
+    price: 8.0,
+    img: "images/neosep.jpg",
+  },
+  {
+    productName: "flanaxforte",
+    price: 31.0,
+    img: "images/flanaxforte.jfif",
+  },
+  {
+    productName: "medicol",
+    price: 10.0,
+    img: "images/medicol.webp",
+  },
+  {
+    productName: "rexidolforte",
+    price: 8.0,
+    img: "images/rexidolforte.png",
+  },
+  {
+    productName: "kremil-s",
+    price: 11.0,
+    img: "images/kremil-s.webp",
+  },
+  {
+    productName: "diatab",
+    price: 10.0,
+    img: "images/diatab.webp",
+  },
+  {
+    productName: "lomotil",
+    price: 15.0,
+    img: "images/lomotil.webp",
+  },
+  {
+    productName: "alaxan .fr",
+    price: 13.0,
+    img: "images/alaxanfr.webp",
+  },
+  {
+    productName: "gapas",
+    price: 9.0,
+    img: "images/gapas.jpg",
+  },
+  {
+    productName: "alpine",
+    price: 38.0,
+    img: "images/alpine.avif",
+  },
+  {
+    productName: "doreen",
+    price: 50.0,
+    img: "images/doreen.png",
+  },
+  {
+    productName: "tanghon",
+    price: 10.0,
+    img: "images/tanghon.png",
+  },
+  {
+    productName: "Suka dagko",
+    price: 10.0,
+    img: "images/silverswan.webp",
   },
   {
     productName: "Pancit Canton",
@@ -191,8 +266,134 @@ const productList = [
     price: 10.0,
     img: "images/cotton-buds.jpg",
   },
+  {
+    productName: "Bitsin",
+    price: 5.0,
+    img: "images/bitsin.webp",
+  },
+  {
+    productName: "Magic Sarap",
+    price: 6.0,
+    img: "images/magic-sarap.avif",
+  },
+  {
+    productName: "Creamsilk",
+    price: 9.0,
+    img: "images/cream-silk.webp",
+    img2: "images/cream-silk-hover.webp",
+  },
+  {
+    productName: "Keratin Gold",
+    price: 10.0,
+    img: "images/keratin.avif",
+  },
+  {
+    productName: "Head and shoulder",
+    price: 10.0,
+    img: "images/head-and-shoulder.jpg",
+  },
+  {
+    productName: "Rexona Men & Women",
+    price: 10.0,
+    img: "images/rexona-men.webp",
+    img2: "images/rexona-women.webp",
+  },
+  {
+    productName: "Egg (Medium Size)",
+    price: 9.0,
+    img: "images/egg.webp",
+  },
+  {
+    productName: "Cerelac",
+    price: 13.0,
+    img: "images/cerelac.avif",
+  },
+  {
+    productName: "Everclean",
+    price: 16.0,
+    img: "images/everclean.jpg",
+  },
+  {
+    productName: "Perla Bar",
+    price: 16.0,
+    img: "images/perla.webp",
+  },
+  {
+    productName: "Cathy Bar",
+    price: 15.0,
+    img: "images/cathy-bar.jpg",
+  },
+  {
+    productName: "Tablia",
+    price: 6.0,
+    img: "images/tablia.jpg",
+  },
+  {
+    productName: "Tablia dark",
+    price: 11.0,
+    img: "images/tablia-dark.jpg",
+  },
+  {
+    productName: "Hair Works Gel",
+    price: 4.0,
+    img: "images/hairworksgel.jpg",
+  },
+  {
+    productName: "Toothbrush",
+    price: 20.0,
+    img: "images/toothbrush.jpg",
+  },
+  {
+    productName: "Efficascent",
+    price: 30.0,
+    img: "images/efficascent.jpg",
+  },
+  {
+    productName: "Juicy cologne",
+    price: 22.0,
+    img: "images/juicy-cologne.jpg",
+  },
+  {
+    productName: "Mongos 1/4",
+    price: 23.0,
+    img: "images/mongos.jpg",
+  },
+  {
+    productName: "Asukar (Brown)",
+    price: 20.0,
+    img: "images/asukar-brown.jpg",
+  },
+  {
+    productName: "Asukar Puti",
+    price: 26.0,
+    img: "images/asukar-puti.jpg",
+  },
+  {
+    productName: "Colgate & Close-UP",
+    price: 10.0,
+    img: "images/colgate-sachet.jfif",
+    img2: "images/colgate-sachet-hover.png",
+  },
+  {
+    productName: "Patis Dagko",
+    price: 13.0,
+    img: "images/silverswan-patis.png",
+  },
+  {
+    productName: "Joy diswashing",
+    price: 7.0,
+    img: "images/joy-washing.webp",
+  },
+  {
+    productName: "Antibac downy",
+    price: 8.0,
+    img: "images/antibacdowny.webp",
+  },
 ];
 
+const focusInput = document.querySelector("#input");
+
+focusInput.focus();
 function productSearch() {
   const result = document.querySelector(".results");
   const errorMsg = document.querySelector(".error-msg");
@@ -228,6 +429,12 @@ function productSearch() {
     productImg += `<img src=${product.img2} class="img-hover" />`;
   } else if (product.productName === "Lucky Me") {
     productImg += `<img src=${product.img2} class="img-hover" />`;
+  } else if (product.productName === "Creamsilk") {
+    productImg += `<img src=${product.img2} class="img-hover" />`;
+  } else if (product.productName === "Rexona Men & Women") {
+    productImg += `<img src=${product.img2} class="img-hover" />`;
+  } else if (product.productName === "Colgate & Close-UP") {
+    productImg += `<img src=${product.img2} class="img-hover" />`;
   }
 
   result.innerHTML = `<div class="l-side">
@@ -255,6 +462,12 @@ function productSearch() {
   } else if (product.productName === "Sprite Dako") {
     rightSide.innerHTML += `<h1 class="product-name">Sprite Gamay</h1>
     <span>&#8369;15.00</span>`;
+  } else if (product.productName === "Suka dagko") {
+    rightSide.innerHTML += `<h1 class="product-name">Suka JR</h1>
+    <span>&#8369;9.00</span>`;
+  } else if (product.productName === "Patis dagko") {
+    rightSide.innerHTML += `<h1 class="product-name">Patis JR</h1>
+    <span>&#8369;10.00</span>`;
   }
 
   if (!inputText.trim()) {
